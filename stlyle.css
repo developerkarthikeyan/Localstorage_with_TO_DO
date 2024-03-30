@@ -1,0 +1,148 @@
+body {
+  background: linear-gradient(300deg,deepskyblue,darkviolet,blue);
+  /* -size: 100% 100%; */
+  animation: gradient-animation 18s ease infinite;
+  height: 100vh;
+  /* width: 100%; */ */
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1,h3  {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    
+background-image: -webkit-linear-gradient(165deg, #e04b10, #e90a9f, #02811e);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+-webkit-animation: hue 15s infinite linear;
+}@-webkit-keyframes hue {
+ from {
+   -webkit-filter: hue-rotate(0deg);
+ }
+ to {
+   -webkit-filter: hue-rotate(-360deg);
+ }
+}
+
+      
+  
+.dark{
+    background-color: black;
+    color: wheat;
+}
+.white{
+    background-color: red;
+}
+.container{
+   max-width: 500px;
+   margin: 0 auto;
+   height: auto;
+   padding: 1rem 1rem;
+   /* background-color:whitesmoke; */
+   background-color:#e9ecef;
+   border-radius: 10px;
+   position: absolute;
+   left: 30%;
+   top: 30%;
+   animation-name: containeranimaton;
+animation-duration: 3s;
+}
+@keyframes containeranimaton {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(none);
+    }
+        }
+    
+h1{
+    text-align: center;
+
+   margin-bottom: 10px;
+
+}
+
+h3,label,button {
+   
+font-size: 20px;
+font-family: "Reddit Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  padding: 0.2rem 0.2rem;
+
+}
+  input{
+    height: 20px;
+width: 100%;
+  }
+ul li{
+    list-style: none;
+
+font-size: 20px;
+
+}
+label,input{
+    display: block;
+    margin-bottom: 10px;
+}
+i{
+    padding: 3px 5px;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+#output{
+    border-top: 1px solid black;
+    margin-top: 10px;
+  
+}
+#datalist li{
+    display: flex;
+justify-content: space-between;
+margin-bottom: 5px;
+}
+button{
+    width: auto;
+    padding: 10px 10px;
+border-radius: 10px;
+border: 1px solid transparent;
+background-color: gray;
+}
+
+/* Styles for devices with a maximum width of 768 pixels (typical for mobile devices) */
+@media only screen and (max-width: 768px) {
+    /* Add your mobile-specific styles here */
+    body {
+      font-size: 14px; /* Example: smaller font size for better readability on smaller screens */
+    }
+    .container {
+      width: 90%;
+      top: 20%;
+      left: 0;
+      animation-name: containeranimaton;
+      animation-duration: 3s;
+      /* Example: adjust container width for better layout on mobile screens */
+    }
+    @keyframes containeranimaton {
+0%{
+    transform: translateY(-100%);
+}
+100%{
+    transform: translateY(none);
+}
+    }
+
+}
